@@ -7,9 +7,9 @@ const newBtn = document.querySelector(".new-btn");
 let photoArray = []; // collects the selected photos
 let overlayArray = []; // collects the selected photos' overlays
 let choosenArray = []; // collects the matched photos
-// for (var i = gameBoard.children.length; i >= 0; i--) {
-//   gameBoard.appendChild(gameBoard.children[(Math.random() * i) | 0]);
-// }
+for (var i = gameBoard.children.length; i >= 0; i--) {
+   gameBoard.appendChild(gameBoard.children[(Math.random() * i) | 0]); 
+}
 //
 //
 //
