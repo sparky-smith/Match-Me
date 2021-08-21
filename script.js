@@ -2,12 +2,14 @@ const gameBoard = document.querySelector(".gameBoard");
 const gameImg = document.querySelectorAll(".game-img");
 const result = document.querySelector("#result");
 const scoreText = document.querySelector(".score-text");
+const score = document.querySelector(".score");
+const newBtn = document.querySelector(".new-btn");
 let photoArray = []; // collects the selected photos
 let overlayArray = []; // collects the selected photos' overlays
 let choosenArray = []; // collects the matched photos
-for (var i = gameBoard.children.length; i >= 0; i--) {
-  gameBoard.appendChild(gameBoard.children[(Math.random() * i) | 0]);
-}
+// for (var i = gameBoard.children.length; i >= 0; i--) {
+//   gameBoard.appendChild(gameBoard.children[(Math.random() * i) | 0]);
+// }
 //
 //
 //
@@ -19,6 +21,9 @@ for (let i = 0; i < gameImg.length; i++) {
     function checkGameFinish() {
       if (choosenArray.length === gameBoard.children.length) {
         scoreText.textContent = "You got'em all!🎉";
+        gameBoard.style.display = "none";
+        scoreText.classList.add("set-text");
+        newBtn.style.display = "block";
       }
     }
     // function to check matchings
@@ -75,3 +80,7 @@ for (let i = 0; i < gameImg.length; i++) {
     }
   });
 }
+
+newBtn.addEventListener("click", function () {
+  location.reload();
+});
