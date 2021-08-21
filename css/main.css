@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  background-color: #f68657;
+}
+
+img {
+  width: 100%;
+  display: block;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@-webkit-keyframes animationText {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  50% {
+    -webkit-transform: scale(1.75);
+            transform: scale(1.75);
+    opacity: 0.5;
+  }
+  75% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animationText {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  50% {
+    -webkit-transform: scale(1.75);
+            transform: scale(1.75);
+    opacity: 0.5;
+  }
+  75% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.game-name {
+  font-size: 2.5rem;
+}
+
+.game-display {
+  display: -ms-grid;
+  display: grid;
+  background-color: #e53a40;
+  padding: 3rem;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+}
+
+.game-display .score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.game-display .gameBoard {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  width: 80vw;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.game-display .gameBoard .img-wrapper {
+  padding: 0.5rem;
+}
+
+.game-display .gameBoard .img-wrapper .game-img {
+  position: relative;
+}
+
+.game-display .gameBoard .img-wrapper .game-img .side {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.game-display .gameBoard .img-wrapper .game-img .game-photo {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.game-display .gameBoard .img-wrapper .game-img .img-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .game-display .gameBoard {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*# sourceMappingURL=main.css.map */
