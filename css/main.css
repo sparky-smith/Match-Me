@@ -156,4 +156,49 @@ img {
         grid-template-columns: repeat(3, 1fr);
   }
 }
+
+@media screen and (max-width: 560px) {
+  img {
+    height: 100px;
+  }
+  .score {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .score-text {
+    font-size: 1rem;
+  }
+}
+
+.set-text {
+  font-size: 1rem;
+  margin-left: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.new-btn {
+  width: 10rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  display: none;
+}
+
+.new-btn:hover {
+  background-color: #555;
+  color: #ddd;
+}
 /*# sourceMappingURL=main.css.map */
